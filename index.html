@@ -47,10 +47,16 @@
   .status{font:500 11px/1 "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;color:var(--muted)}
   .status.live{color:var(--accent)}
   footer{max-width:680px;margin:0 auto;padding:0 24px 48px;font:400 13px/1.6 "IBM Plex Mono",monospace;color:var(--muted)}
+  .header-inner{display:flex;align-items:flex-start;justify-content:space-between;gap:32px}
+  .header-text{flex:1;min-width:0}
+  .header-photo{flex-shrink:0}
+  .header-photo img{width:120px;height:120px;border-radius:50%;object-fit:cover;object-position:center top;display:block;border:2px solid var(--rule)}
   @media (max-width:520px){
     main{padding-top:48px}
     ol.path li{grid-template-columns:1fr;gap:2px}
     .lede{font-size:18px}
+    .header-inner{flex-direction:column-reverse;align-items:flex-start}
+    .header-photo img{width:88px;height:88px}
   }
 </style>
 </head>
@@ -58,15 +64,22 @@
 <main>
 
   <header>
-    <p class="label">Hello, I'm</p>
-    <h1>Ishrak Khair</h1>
-    <p class="lede">Systems engineer, husband, father of two girls and a boy, and a man of faith. Saturday pickup soccer player and Arsenal fan. Twelve years of building software close to hardware and security, and now building alongside AI.</p>
-    <nav class="links" aria-label="Contact and profiles">
-      <a href="https://github.com/ishrakk">GitHub</a>
-      <a href="https://www.linkedin.com/in/ishrakkhair">LinkedIn</a>
-      <a href="mailto:ishrakk@gmail.com">Email</a>
-      <a href="https://maketheteams.com">maketheteams.com</a>
-    </nav>
+    <div class="header-inner">
+      <div class="header-text">
+        <p class="label">Hello, I'm</p>
+        <h1>Ishrak Khair</h1>
+        <p class="lede">Systems engineer, husband, father of two girls and a boy, and a man of faith. Saturday pickup soccer player and Arsenal fan. Twelve years of building software close to hardware and security, and now building alongside AI.</p>
+        <nav class="links" aria-label="Contact and profiles">
+          <a href="https://github.com/ishrakk">GitHub</a>
+          <a href="https://www.linkedin.com/in/ishrakkhair">LinkedIn</a>
+          <a href="mailto:ishrakk@gmail.com">Email</a>
+          <a href="https://maketheteams.com">maketheteams.com</a>
+        </nav>
+      </div>
+      <div class="header-photo">
+        <img src="photo.jpg" alt="Ishrak Khair">
+      </div>
+    </div>
   </header>
 
   <section aria-labelledby="believe">
